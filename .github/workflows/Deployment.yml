@@ -35,13 +35,13 @@ jobs:
         with:
           cmd: install # will run `yarn install` command
           
-      -name: Build react App
-      -run: build yarn
+      - name: Build react-app
+      - run: build yarn
       
-      -name: Install Surge
-      -run: npm install -g surge
+      - name: Install Surge
+      - run: npm install -g surge
       
-      -name: Deploy surge
-      -run: surge ./build qulzamreactproject.surge.sh --token ${{ tokens.SURGE_TOKEN }}
+      - name: Deploy surge
+      - run: surge ./build qulzamreactproject.surge.sh --token ${{ tokens.SURGE_TOKEN }}
       
       
